@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: lightskyblue;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: skyblue;
+}
+
+li {
+    margin: 10px 0;
+}
+
+li:hover {
+    color: orange;
+}
