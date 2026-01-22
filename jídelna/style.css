@@ -1,0 +1,48 @@
+.grid {
+    display: grid;
+    grid-template-columns: 120px repeat(8, 1fr);
+    gap: 4px;
+    grid-auto-rows: 80px;
+    max-width: 100%;
+    margin: auto;
+    overflow: auto;
+}
+
+.grid div {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.hlava {
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+.den {
+    background: white;
+    font-weight: bold;
+    color: black;
+}
+
+.snidane {
+    background: red;
+    color: white;
+}
+
+.polevka {
+    background: orange;
+    color: white;
+}
+
+.obed {
+    background: green;
+    color: white;
+}
+
+.vecere {
+    background: blue;
+    color: white;
+}
