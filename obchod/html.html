@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sportovní obchod</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar__inner">
+        <div class="brand" aria-label="Název obchodu">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <div class="brand__text">
+                <div class="brand__name">Sportovní obchod</div>
+                <div class="brand__tagline">Vybrané produkty pro regeneraci a výkon</div>
+            </div>
+        </div>
+
+        <div class="topbar__actions">
+            <div class="search" role="search">
+                <input data-testid="input-search" id="search" class="search__input" type="search" placeholder="Hledat produkt…" autocomplete="off" />
+                <button data-testid="button-clear-search" class="search__clear" type="button" aria-label="Vymazat hledání" title="Vymazat">×</button>
+            </div>
+            <button data-testid="button-theme" class="iconbtn" type="button" aria-pressed="false" aria-label="Přepnout motiv" title="Motiv">
+                <span class="iconbtn__sun" aria-hidden="true">☀</span>
+                <span class="iconbtn__moon" aria-hidden="true">☾</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="layout">
+    <aside class="sidebar" aria-label="Filtry">
+        <div class="sidebar__section">
+            <div class="sidebar__title">Kategorie</div>
+            <div class="chips" role="list">
+                <button data-testid="chip-category-all" class="chip is-active" type="button" data-filter="all">Vše</button>
+                <button data-testid="chip-category-regenerace" class="chip" type="button" data-filter="regenerace">Regenerace</button>
+                <button data-testid="chip-category-vyziva" class="chip" type="button" data-filter="vyziva">Výživa</button>
+                <button data-testid="chip-category-borci" class="chip" type="button" data-filter="borci">Bojové sporty</button>
+            </div>
+        </div>
+
+        <div class="sidebar__section">
+            <div class="sidebar__title">Řadit</div>
+            <label class="field">
+                <span class="field__label">Podle</span>
+                <select data-testid="select-sort" id="sort" class="field__control">
+                    <option value="featured">Doporučené</option>
+                    <option value="price-asc">Cena: od nejnižší</option>
+                    <option value="price-desc">Cena: od nejvyšší</option>
+                    <option value="name-asc">Název: A → Z</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="sidebar__section">
+            <div class="sidebar__title">Cenové rozpětí</div>
+            <div class="range">
+                <div class="range__row">
+                    <label class="field">
+                        <span class="field__label">Min</span>
+                        <input data-testid="input-price-min" id="minPrice" class="field__control" type="number" inputmode="numeric" min="0" step="1" placeholder="0" />
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Max</span>
+                        <input data-testid="input-price-max" id="maxPrice" class="field__control" type="number" inputmode="numeric" min="0" step="1" placeholder="3000" />
+                    </label>
+                </div>
+                <div class="range__actions">
+                    <button data-testid="button-reset" class="btn btn--ghost" type="button">Reset</button>
+                    <button data-testid="button-apply" class="btn" type="button">Použít</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar__footer">
+            <div class="meta">
+                <div data-testid="text-count" class="meta__count">Zobrazeno: <span id="count">0</span></div>
+                <div class="meta__hint">Tip: můžeš filtrovat i přes hledání.</div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content" aria-label="Produkty">
+        <section class="hero" aria-label="Úvod">
+            <div class="hero__inner">
+                <h1 class="hero__title">Minimalistický výběr. Maximální užitek.</h1>
+                <p class="hero__desc">Tři ověřené produkty pro regeneraci, energii a tréninkový rituál.</p>
+                <div class="hero__cta">
+                    <a data-testid="link-hero-shop" class="btn" href="#produkty">Prohlédnout produkty</a>
+                    <a data-testid="link-hero-alza" class="btn btn--ghost" href="https://www.alza.cz/sport" target="_blank" rel="noreferrer">Více na Alze</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="produkty">
+            <div class="section__head">
+                <h2 class="section__title">Produkty</h2>
+                <div class="section__right">
+                    <span data-testid="text-active-filters" class="pill" id="activeFilters">Žádné filtry</span>
+                </div>
+            </div>
+
+            <div id="grid" class="grid" aria-live="polite"></div>
+
+            <div id="empty" class="empty" hidden>
+                <div class="empty__title">Nic jsme nenašli</div>
+                <div class="empty__desc">Zkus upravit filtry nebo smazat hledání.</div>
+                <button data-testid="button-empty-reset" class="btn" type="button">Zrušit filtry</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer__inner">
+                <div class="footer__left">© <span id="year"></span> Sportovní obchod</div>
+                <div class="footer__right">Odkazy vedou na externí e-shop.</div>
+            </div>
+        </footer>
+    </main>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
