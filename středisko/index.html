@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Sportovní areál KubaZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Sportovní areál KubaZone</h1>
+    <p>Sportuj naplno!</p>
+</header>
+
+<nav>
+    <a href="#o-nas">O nás</a>
+    <a href="#sporty">Sporty</a>
+    <a href="#cenik">Ceník</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="o-nas">
+    <h2>O našem areálu</h2>
+    <p>Náš moderní sportovní areál nabízí kvalitní zázemí pro všechny věkové kategorie. Přijď si zahrát, zacvičit nebo si jen aktivně odpočinout.</p>
+</section>
+
+<section id="sporty">
+    <h2>Naše sporty</h2>
+    <div class="sports">
+
+        <div class="card">
+            <h3>Fotbal</h3>
+            <p>Umělý trávník s osvětlením.</p>
+            <button class="button" data-sport="Fotbal">Rezervovat</button>
+        </div>
+
+        <div class="card">
+            <h3>Tenis</h3>
+            <p>Kvalitní venkovní i kryté kurty.</p>
+            <button class="button" data-sport="Tenis">Rezervovat</button>
+        </div>
+
+        <div class="card">
+            <h3>Fitness</h3>
+            <p>Moderní posilovna s trenérem Panem Kubou.</p>
+            <button class="button" data-sport="Fitness">Rezervovat</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="cenik">
+    <h2>Ceník</h2>
+    <p>Fotbal: 800 Kč / hodina</p>
+    <p>Tenis: 400 Kč / hodina</p>
+    <p>Fitness: 150 Kč / vstup</p>
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Email: info@kubazone.cz</p>
+    <p>Telefon: +420 676 767 676</p>
+</section>
+
+<footer>
+    <p>2026 Sportovní areál KubaZone</p>
+</footer>
+
+<div id="formOverlay">
+    <form id="reservationForm">
+        <span class="closeBtn">&times;</span> <!-- křížek -->
+        <h3 id="formTitle">Rezervace</h3>
+        <label>Jméno:<input type="text" id="name" required></label>
+        <label>Datum:<input type="date" id="date" required></label>
+        <label>Čas:<input type="time" id="time" required></label>
+        <button type="submit">Odeslat rezervaci</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
