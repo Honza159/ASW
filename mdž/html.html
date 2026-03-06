@@ -1,182 +1,282 @@
 <!doctype html>
 <html lang="cs">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Mezinárodní den žen – historie, význam a významné ženy.">
+    <meta name="description" content="Stránka o Mezinárodním dni žen - Historie, význam a významné ženy.">
     <title>Mezinárodní den žen</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-            background: white;
-            color: black;
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            line-height:1.6;
+            background:white;
+            color:black;
         }
 
-        header, nav, footer {
-            background: green;
-            color: white;
-            text-align: center;
-            padding: 10px;
+        .container{
+            max-width:auto;
+            margin:auto;
+            padding:20px;
         }
 
-        nav a {
-            color: white;
-            margin: 0 10px;
+        nav{
+            background:black;
+            color:white;
+            padding:15px;
         }
 
-        main {
-            max-width: 800px;
-            margin: auto;
-            padding: 15px;
+        nav a{
+            color:white;
+            margin-right:15px;
+            text-decoration:none;
         }
 
-        section {
-            margin-bottom: 30px;
+        nav a:hover{
+            text-decoration:underline;
         }
 
-        article {
-            margin-bottom: 20px;
-            padding: 10px;
-            border-left: 4px solid green;
+        header{
+            padding:30px 0;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        .title{
+            display:flex;
+            align-items:center;
+            gap:15px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .title img{
+            width:50px;
+            height:50px;
         }
 
-        th, td {
-            border: 1px solid mintcream;
-            padding: 6px;
+        img{
+            max-width:100%;
+            height:auto;
         }
 
-        th {
-            background: palegreen;
+        section{
+            margin-top:40px;
+        }
+
+        .women{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+            margin-top:20px;
+        }
+
+        article{
+            background:gray;
+            color:white;
+            padding:15px;
+            border-radius:12px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        th,td{
+            border:1px solid black;
+            padding:8px;
+            text-align:left;
+        }
+
+        th{
+            background:gray;
+            color:white;
+        }
+
+        footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+        blockquote{
+            background:gray;
+            color:white;
+            padding:15px;
+            margin-top:20px;
+            border-radius:10px;
+        }
+
+
+        @media (max-width:700px){
+            .women{
+                grid-template-columns:1fr;
+            }
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Mezinárodní den žen (MDŽ)</h1>
-    <p>Mezinárodní den žen se slaví 8. března a
-        připomíná boj žen za rovnoprávnost, spravedlnost a lidská práva.</p>
-</header>
-
-<nav>
+<nav class="container">
+    <a href="#uvod">Úvod</a>
     <a href="#historie">Historie MDŽ</a>
-    <a href="#dnes">MDŽ dnes</a>
+    <a href="#dnes">Jak se slaví dnes</a>
     <a href="#zeny">Významné ženy</a>
-    <a href="#zdroje">Zdroje</a>
 </nav>
 
-<main>
+<header class="container" id="uvod">
+
+    <div class="title">
+        <img src="img/mdz.png" alt="Květina symbolizující MDŽ">
+        <h1>Mezinárodní den žen</h1>
+    </div>
+
+    <p>
+        Mezinárodní den žen (MDŽ) se slaví každoročně 8. března. Tento den připomíná boj žen
+        za rovná práva, lepší pracovní podmínky a rovnoprávnost ve společnosti.
+        Dnes je MDŽ také příležitostí ocenit úspěchy a přínos žen v různých oblastech života.
+    </p>
+
+</header>
+
+<main class="container">
 
     <section id="historie">
+
         <h2>Historie MDŽ</h2>
 
-        <p>MDŽ vznikl na začátku 20. století jako součást
-            boje žen za volební právo a lepší pracovní podmínky.</p>
+        <p>
+            Počátky Mezinárodního dne žen sahají do začátku 20. století,
+            kdy ženy v různých zemích protestovaly za volební právo
+            a lepší pracovní podmínky.
+        </p>
 
-        <h3>Časová osa</h3>
-        <ol>
-            <li>1908 – Protesty dělnic v USA.</li>
-            <li>1910 – Návrh na zavedení MDŽ v Kodani.</li>
-            <li>1911 – První oslavy v Evropě.</li>
-            <li>1975 – OSN oficiálně uznává MDŽ.</li>
-        </ol>
+        <h3>Důležité milníky</h3>
 
-        <blockquote>
-            „Nemůžeme uspět, pokud polovina z nás zůstává pozadu.“
-            <footer>– Malala Yousafzai</footer>
-        </blockquote>
+        <ul>
+            <li>1908 – protesty dělnic v New Yorku</li>
+            <li>1910 – návrh na vytvoření Mezinárodního dne žen</li>
+            <li>1911 – první oslavy MDŽ v Evropě</li>
+            <li>1975 – OSN oficiálně uznává Mezinárodní den žen</li>
+        </ul>
 
     </section>
 
     <section id="dnes">
+
         <h2>Jak se MDŽ slaví dnes</h2>
 
-        <p>Dnes je MDŽ příležitostí vyjádřit úctu ženám a podporovat rovnost ve společnosti.</p>
-
-        <ul>
-            <li>Předávání květin</li>
-            <li>Konference o právech žen</li>
-            <li>Vzdělávací akce</li>
-            <li>Mediální kampaně</li>
-        </ul>
-
-        <h3>Dříve vs. dnes</h3>
+        <p>
+            Dnes je MDŽ příležitostí připomenout si rovnost žen a mužů,
+            podpořit práva žen a oslavit jejich úspěchy ve společnosti,
+            vědě, politice nebo kultuře.
+        </p>
 
         <table>
+
             <thead>
             <tr>
-                <th>Období</th>
-                <th>Hlavní téma</th>
-                <th>Způsob oslavy</th>
+                <th>Dříve</th>
+                <th>Dnes</th>
             </tr>
             </thead>
+
             <tbody>
             <tr>
-                <td>Dříve</td>
-                <td>Volební právo a pracovní podmínky</td>
-                <td>Demonstrace a protesty</td>
+                <td>Protesty za volební právo</td>
+                <td>Diskuze o rovnosti a právech žen</td>
             </tr>
+
             <tr>
-                <td>Dnes</td>
-                <td>Rovné příležitosti a vzdělání</td>
-                <td>Společenské a vzdělávací akce</td>
+                <td>Boj za pracovní podmínky</td>
+                <td>Oceňování úspěchů žen</td>
+            </tr>
+
+            <tr>
+                <td>Demonstrace a stávky</td>
+                <td>Konference, vzdělávání a oslavy</td>
             </tr>
             </tbody>
+
         </table>
 
     </section>
 
     <section id="zeny">
+
         <h2>Významné ženy</h2>
 
-        <article>
-            <h3>Marie Curie</h3>
-            <img src="img/marie.png" alt="Portrét Marie Curie">
-            <p>Vědkyně, která získala dvě Nobelovy ceny za výzkum radioaktivity.</p>
-        </article>
+        <div class="women">
 
-        <article>
-            <h3>Milada Horáková</h3>
-            <img src="img/milada.png" alt="Portrét Milady Horákové">
-            <p>Česká politička a bojovnice za práva žen, popravená komunistickým režimem.</p>
-        </article>
+            <article>
 
-        <article>
-            <h3>Malala Yousafzai</h3>
-            <img src="img/malada.png" alt="Portrét Malaly Yousafzai">
-            <p>Aktivistka za vzdělávání dívek a nejmladší nositelka Nobelovy ceny míru.</p>
-        </article>
+                <h3>Marie Curie</h3>
+
+                <img src="img/curie.jpg" alt="Marie Curie">
+
+                <p>
+                    Marie Curie byla slavná vědkyně, která objevila radioaktivitu.
+                    Získala dvě Nobelovy ceny a významně přispěla k rozvoji vědy.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Milada Horáková</h3>
+
+                <img src="img/horakova.jpg" alt="Milada Horáková">
+
+                <p>
+                    Milada Horáková byla česká politička a bojovnice za lidská práva.
+                    Postavila se komunistickému režimu a stala se symbolem odvahy.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Rosa Parks</h3>
+
+                <img src="img/parks.jpg" alt="Rosa Parks">
+
+                <p>
+                    Rosa Parks byla americká aktivistka, která se stala symbolem
+                    boje proti rasové diskriminaci v USA.
+                </p>
+
+            </article>
+
+        </div>
+
+        <blockquote>
+            „Nikdy nesmíte mít strach z toho, co děláte, když je to správné.“
+            <br>
+            - Rosa Parks
+        </blockquote>
 
     </section>
 
-    <section id="zdroje">
+    <section>
+
         <h2>Zdroje</h2>
+
         <p>
-            <a href="https://www.un.org/en/observances/womens-day" target="_blank">
-                Oficiální stránka OSN k Mezinárodnímu dni žen
-            </a>
+            Více informací o historii MDŽ:
         </p>
+
+        <ul>
+            <li><a href="https://www.un.org/en/observances/womens-day">Oficiální stránka OSN o Mezinárodním dni žen</a></li>
+            <li><a href="https://cs.wikipedia.org/wiki/Mezin%C3%A1rodn%C3%AD_den_%C5%BEen">Wikipedia – Mezinárodní den žen</a></li>
+        </ul>
+
     </section>
 
 </main>
-
 <footer>
-    2026
+    <p>Mezinárodní den žen 2026</p>
 </footer>
-
 </body>
 </html>
